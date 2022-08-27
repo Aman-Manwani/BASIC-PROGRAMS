@@ -1,0 +1,103 @@
+#include<stdio.h>
+int main()
+{
+int no[3][3],a,b,c,nu[3][3],nc[3][3],tu[3][3],ta[3][3],diff[3][3];
+printf("\nenter Ist matrix(a)\n");
+for(a=0;a<=2;a++)
+{
+	for(b=0;b<=2;b++)
+   {
+   printf("enter your number at location [%d][%d]=",a,b);
+   scanf("%d",&no[a][b]);
+   }
+}
+for(a=0;a<=2;a++)
+{
+	printf("\n");
+	for(b=0;b<=2;b++)
+   {
+   printf("%3d",no[a][b]);
+	}
+}
+printf("\nenter 2nd matrix(b)\n");
+for(a=0;a<=2;a++)
+{
+	for(b=0;b<=2;b++)
+   {
+   printf("enter your number at location [%d][%d]=",a,b);
+   scanf("%d",&nu[a][b]);
+   }
+}
+for(a=0;a<=2;a++)
+{
+	printf("\n");
+	for(b=0;b<=2;b++)
+   {
+   printf("%3d",nu[a][b]);
+	}
+}
+printf("\nenter 3rd matrix(c)\n");
+for(a=0;a<=2;a++)
+{
+	for(b=0;b<=2;b++)
+   {
+   printf("enter your number at location [%d][%d]=",a,b);
+   scanf("%d",&nc[a][b]);
+   }
+}
+for(a=0;a<=2;a++)
+{
+	printf("\n");
+	for(b=0;b<=2;b++)
+   {
+   printf("%3d",nc[a][b]);
+	}
+}
+printf("\nb^2=\n");
+for(a=0;a<=2;a++)
+{
+	for(b=0;b<=2;b++)
+   {
+   tu[a][b]=0;
+   	for(c=0;c<=2;c++)
+      tu[a][b]=tu[a][b]+nu[a][c]*nu[c][b];
+   }
+}
+for(a=0;a<=2;a++)
+{
+	printf("\n");
+	for(b=0;b<=2;b++)
+   {
+   printf("%6d",tu[a][b]);
+	}
+}
+printf("\n4ac=\n");
+for(a=0;a<=2;a++)
+{
+	for(b=0;b<=2;b++)
+   {
+   ta[a][b]=0;
+   	for(c=0;c<=2;c++)
+      ta[a][b]=ta[a][b]+no[a][c]*nc[c][b];
+   }
+}
+for(a=0;a<=2;a++)
+{
+	printf("\n");
+	for(b=0;b<=2;b++)
+   {
+   printf("%6d",4*ta[a][b]);
+	}
+}
+printf("\nb^2-4ac=\n");
+for(a=0;a<=2;a++)
+{
+	printf("\n");
+	for(b=0;b<=2;b++)
+   {
+   diff[a][b]=tu[a][b]-4*ta[a][b];
+   printf("%8d",diff[a][b]);
+   }
+}
+}
+
